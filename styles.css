@@ -1,0 +1,378 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+header {
+  position: relative;
+  width: 100%;
+}
+
+/* === Missions Button Polygon Design === */
+
+/* === Missions / Era / Home Button === */
+#missions-btn {
+  /* shape & size */
+  padding: 0 20px;
+  height: 60px;
+  background-color: darkorange;
+  clip-path: polygon(
+    10% 0%, 35% 0%, 40% 20%, 60% 20%,
+    65% 0%, 90% 0%, 100% 50%, 90% 100%,
+    10% 100%, 0% 50%
+  );
+  
+  /* flex layout for label, caret, sep, home */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  /* typography */
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  
+  /* fixed position */
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#missions-btn:hover,
+#missions-btn.active {
+  background-color: orangered;
+}
+
+/* the little down-caret */
+#missions-btn .caret {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right:6px solid transparent;
+  border-top: 6px solid white;
+  transition: transform 0.25s ease;
+  /* zero margins: gap handles all the spacing */
+  margin: 0;
+}
+
+/* flip caret when open */
+#missions-btn.active .caret {
+  transform: rotate(180deg);
+}
+
+/* separator and Home need no extra margins either */
+#missions-btn .separator,
+#missions-btn #home-button {
+  margin: 0;
+}
+
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Carousel stuff */
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+}
+
+/* after your reset of span padding: */
+#home-button {
+  display: inline-block;   /* so padding expands the box */
+  padding: 0.3em;   /* tweak these to taste */
+  margin-left: 4px;         /* a bit of breathing room from the “|” */
+  cursor: pointer;
+  text-decoration: none;    /* if it’s an <a> */
+  color: inherit;
+  border-radius: 4px;       /* optional: give it a pill shape on hover */
+  transition: background 0.2s;
+}
+
+.mission-circle, .carousel-container {
+flex-flow: wrap row;
+}
+
+.mission-circle {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+.mission-item {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.circle {
+  flex-shrink: 0;
+}
+
+.mission-title, .mission-date {
+  margin: 0.4em 0;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.arrow {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em 0.75em;
+  border-radius: 5px;
+  z-index: 10;
+}
+.arrow.arrow-left {
+  left: -80px;
+}
+.arrow.arrow-right {
+  right: -80px;
+}
+
+.mission-title {
+  font-size: 1.8em;
+  color: white;
+  font-weight: bolder;
+  margin-bottom: 0.2em;
+  margin-top: 1em; /* Lower the title */
+  text-align: center;
+}
+
+
+.mission-date {
+  font-size: 1.2em;
+  color: #ccc;
+  margin-bottom: 1em; /* Add a bit more spacing under date */
+  text-align: center;
+}
+
+.circle img {
+  width: 200px;
+  height: 200px;
+  border: 5px solid orange;
+  border-radius: 50%;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.circle:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px 5px orange;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Era Nav Stuff */
+
+.menu{z-index:1000000; font-weight:bolder; font-size:1em; width:100%; background:black;  position:absolute; text-align:center; font-size:14px;}
+.menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+.menu li {display: block;   padding:15px 0 15px 0; border-bottom:black 1px solid;}
+.menu li:hover{display: block;    background:#333; padding:15px 0 15px 0; border-bottom:#333 1px solid;}
+.menu ul li a { text-decoration:none;  margin: 0px; color:orange;}
+.menu ul li a:hover {  color: orange; text-decoration:none;}
+.menu a{text-decoration:none; color:darkorange;}
+.menu a:hover{text-decoration:none; color:darkorange;}
+
+.menu {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+font-family: "Tektur", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.nav-main.hidden {
+  display: none;
+}
+
+.era-nav {
+  position: fixed;
+  top: 6em;
+  left: 50%;
+  transform: translate(-50%, -10px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 500;
+  display: flex;
+  gap: 10px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.era-nav ul li {
+  width: 25%;
+  max-width: 150px;
+  height: 80px;
+  background-color: darkorange;
+  border: 6px double;
+  border-radius: 40px;
+  margin: 5px;
+}
+
+
+.era-nav.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.era-nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.era-nav li {
+  flex: 1;
+  padding: 10px;
+  width: 170px;
+}
+
+.era-nav a {
+  display: block;
+  padding: 30px;
+  text-align: center;
+  background: orange;
+  color: white;
+  border-radius: 20px;
+  font-size: large;
+  text-decoration: none;
+  transition: background 0.3s;
+  font-weight: bold;
+}
+
+.era-nav a:hover {
+  background: darkorange;
+}
+
+.erabuttons {
+  margin: 50px;
+}
+
+.hamburger, .cross {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  display: none;
+  z-index: 100%;
+}
+.hamburger{
+  background:none;
+  position:absolute;
+  top:0;
+  right:0;
+  line-height:45px;
+  padding:5px 15px 0px 15px;
+  color:#999;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+  display: none;
+}
+.cross{
+  background:none;
+  position:absolute;
+  top:0px;
+  right:0;
+  padding:7px 15px 0px 15px;
+  color:#999;
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+
+.glyphicon-home{
+  color:white; 
+  font-size:1.5em; 
+  margin-top:5px; 
+  margin:0 auto;
+}
+
+header{display:inline-block; font-size:12px;}
+a{color:#336699;}
+
+@media only screen and (max-width: 1180px) {
+
+.carousel-wrapper {
+  margin-top: 9em;
+}
+}
+
+@media only screen and (max-width: 800px) {
+  .nav-main {
+    margin-bottom: 8vh;
+    display: none;
+  }
+
+  .era-nav {
+    margin-bottom: 8vh;
+  }
+
+  .cross {
+    margin-top: -25px;
+  }
+
+  .hamburger {
+    margin-top: -20px;
+    display: block;
+  }
+
+  #missions-btn {
+    display: none;
+  }
+
+  .mission-circle {
+    margin-top: 480px;
+  }
+
+  .carousel-wrapper {
+    margin-top: 55px;
+  }
+  }

@@ -1,0 +1,167 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    background-image: url('background.jpeg');
+    color: white;
+    font-family: "Tektur", sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height:100vh;
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  .bio-container {
+    background-color: black; 
+    width: 1200px;
+    height: 800px;
+    max-width:90vw;
+    margin:30px 0px;
+    border-radius: 10px; 
+    box-shadow: 0 0 20px 10px rgba(0, 76, 105, 0.8);
+    text-align: center;
+  }
+  
+  .title-container {
+    font-size: 55px; 
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+    .gradient-text {
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, 1) 0%, hsla(197, 100%, 21%, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.vertical-line {
+width: 2px;
+height: 560px;
+background: white;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 3px;
+  background: white;
+  display: none;
+}
+
+.image-container {
+  display:flex;
+  flex-direction: column;
+  gap:70px;
+  overflow: visible;
+}
+
+.image-container img {
+  object-fit: cover;
+  display: block;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px; 
+  box-shadow: 0 0 20px 10px rgba(0, 76, 105, 0.8);
+}
+
+.para p{
+  color:white;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.InfoTitle {
+  font-size: 30px;
+}
+
+.bio {
+  width:500px;
+  max-width:80%;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+  position: absolute;
+  color: white;
+  font-size: clamp(12px , 5vh, 18px);
+}
+
+.info{
+  padding:30px;
+  display:flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-around;
+}
+
+
+@media all and (max-width:1376px){
+  .bio {
+    width: 300px;
+    max-width: 100%;
+    font-size: 15px;
+    padding-bottom: 20px;
+  }
+
+  .vertical-line {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .bio-container {
+    margin-right: 100px;
+    max-width: 1200px;
+    width: 750px;
+  }
+  }
+
+  
+@media all and (max-width: 900px){
+ .info {
+  flex-direction: column;
+  gap: 0px;
+ }
+
+ .vertical-line {
+  display: none;
+ }
+
+ .horizontal-line {
+  display: flex;
+ }
+
+ .image-container {
+  align-items: center;
+  overflow: visible;
+  margin: -45px 0px 40px;
+ }
+
+.bio-container{
+  height:auto;
+}
+
+.para {
+  margin-top: 15px;
+  line-height: 35px;
+}
+
+.bio {
+  margin-top: 35px;
+  position: static;
+}
+
+.bio-container {
+  margin-right: 0px;
+  max-width: 400px;
+  width: 400px;
+}
+
+.InfoTitle{
+margin:10px;
+}
+}

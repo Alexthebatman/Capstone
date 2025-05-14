@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>NASA Missions Carousel</title>
+  <meta name="description" content="NASA Missions">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.15/dist/jquery.bxslider.css">
+</head>
+<body>
+<header>
+  <button class="hamburger">&#9776;</button>
+  <button class="cross">&#735;</button>
+      <button id="missions-btn">
+    <span id="era-label">2010s</span>
+    <span class="caret"></span>
+    <span class="separator">|</span>
+    <a id="home-button" href="../../index.html">Home</a>
+    </button>
+</header>
+
+<div class="menu">
+  <ul>
+    <a href="../../index.html"><li>Home</li></a>
+    <a href="../1960/1960.html"><li>1960</li></a>
+    <a href="../1970/1970.html"><li>1970</li></a>
+    <a href="../1980/1980.html"><li>1980</li></a>
+    <a href="../1990/1990.html"><li>1990</li></a>
+    <a href="../2000/2000.html"><li>2000</li></a>
+    <a style="color:aqua;" href="2010.html"><li>2010</li></a>
+    <a href="../../Capstone Individual Project.html"><li>2020</li></a>
+  </ul>
+</div>
+
+<nav class="era-nav">
+  <ul>
+    <li><a href="../1960/1960.html">1960</a></li>
+    <li><a href="../1970/1970.html">1970</a></li>
+    <li><a href="../1980/1980.html">1980</a></li>
+    <li><a href="../1990/1990.html">1990</a></li>
+    <li><a href="../2000/2000.html">2000</a></li>
+    <li><a href="2010.html">2010</a></li>
+    <li><a href="../../Capstone Individual Project.html">2020</a></li>
+  </ul>
+</nav>
+
+<video class="background-video" autoplay muted loop>
+  <source src="../../Assets/background-video.mp4" type="video/mp4">
+  Browser no support
+</video>
+
+<div class="carousel-wrapper">
+  <div class="carousel-container">
+    <button class="arrow arrow-left">&#9664;</button>
+    <div class="carousel">
+      <div class="mission-circle">
+
+        <div class="mission-item">
+          <div class="mission-title">Atlantis</div>
+          <div class="mission-date">July 8th, 2011</div>
+          <a href="SubSites10s/Atlantis/Atlantis.html">
+            <div class="circle">
+              <img src="Images/atlantis.jpg" alt="Atlantis Space Shuttle on Launch Pad">
+            </div>
+          </a>
+        </div>
+
+        <div class="mission-item">
+          <div class="mission-title">Curiosity Rover</div>
+          <div class="mission-date">November 26th, 2011</div>
+          <a href="Subsites10s/CuriosityRover/CuriosityRover.html">
+            <div class="circle">
+              <img src="Images/curiosityrover.jpg" alt="Curiosity Rover on Martian Surface">
+            </div>
+          </a>
+        </div>
+
+        <div class="mission-item">
+          <div class="mission-title">Orion EFT-1</div>
+          <div class="mission-date">December 5th, 2014</div>
+          <a href="Subsites10s/OrionEFT1/OrionEFT1.html">
+            <div class="circle">
+              <img src="Images/orioneft.jpg" alt="Orion Rocket Launching">
+            </div>
+          </a>
+        </div>
+
+        <div class="mission-item">
+          <div class="mission-title">Juno</div>
+          <div class="mission-date">August 5th, 2011</div>
+          <a href="Subsites10s/Juno/Juno.html">
+            <div class="circle">
+              <img src="Images/Juno.jpg" alt="Render of Juno Spacecraft in front of Jupiter">
+            </div>
+          </a>
+        </div>
+
+        <div class="mission-item">
+          <div class="mission-title">Dawn</div>
+          <div class="mission-date">March 6th, 2015</div>
+          <a href="Subsites10s/Dawn/Dawn.html">
+            <div class="circle">
+              <img src="Images/dawn.jpg" alt="Render of Dawn Orbiter in front of Ceres">
+            </div>
+          </a>
+        </div>
+
+        <div class="mission-item">
+          <div class="mission-title">Insight</div>
+          <div class="mission-date">May 5th, 2018</div>
+          <a href="Subsites10s/Insight/Insight.html">
+            <div class="circle">
+              <img src="Images/insight.jpg" alt="Render of Insight on Martian Surface">
+            </div>
+          </a>
+        </div>
+
+        <div class="mission-item">
+          <div class="mission-title">TESS</div>
+          <div class="mission-date">April 18th, 2018</div>
+          <a href="Subsites10s/TESS/TESS.html">
+            <div class="circle">
+              <img src="Images/TESS.webp" alt="Render of TESS Satellite Flying in Space">
+            </div>
+          </a>
+        </div>
+
+        <div class="mission-item">
+          <div class="mission-title">Parker Solar</div>
+          <div class="mission-date">August 12th, 2018</div>
+          <a href="Subsites10s/ParkerSolar/Parkersolar.html">
+            <div class="circle">
+              <img src="Images/parkersolar.jpg" alt="Render of Parker Solar Probe in front of Sun">
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.15/dist/jquery.bxslider.min.js"></script>
+<script src="../../script.js" defer></script>
+
+</body>
+</html>

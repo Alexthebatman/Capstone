@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>NASA Missions Carousel</title>
+  <meta name="description" content="NASA Missions">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.15/dist/jquery.bxslider.css">
+</head>
+<body>
+<header>
+  <button class="hamburger">&#9776;</button>
+  <button class="cross">&#735;</button>
+      <button id="missions-btn">
+    <span id="era-label">2000s</span>
+    <span class="caret"></span>
+    <span class="separator">|</span>
+    <a id="home-button" href="../../index.html">Home</a>
+    </button>
+</header>
+
+<div class="menu">
+  <ul>
+    <a href="../../index.html"><li>Home</li></a>
+    <a href="../1960/1960.html"><li>1960</li></a>
+    <a href="../1970/1970.html"><li>1970</li></a>
+    <a href="../1980/1980.html"><li>1980</li></a>
+    <a href="../1990/1990.html"><li>1990</li></a>
+    <a style="color:aqua;" href="2000.html"><li>2000</li></a>
+    <a href="../2010/2010.html"><li>2010</li></a>
+    <a href="../../Capstone Individual Project.html"><li>2020</li></a>
+  </ul>
+</div>
+
+<nav class="era-nav">
+  <ul>
+    <li><a href="../1960/1960.html">1960</a></li>
+    <li><a href="../1970/1970.html">1970</a></li>
+    <li><a href="../1980/1980.html">1980</a></li>
+    <li><a href="../1990/1990.html">1990</a></li>
+    <li><a href="2000.html">2000</a></li>
+    <li><a href="../2010/2010.html">2010</a></li>
+    <li><a href="../../Capstone Individual Project.html">2020</a></li>
+  </ul>
+</nav>
+
+<video class="background-video" autoplay muted loop>
+  <source src="../../Assets/background-video.mp4" type="video/mp4">
+  Browser no support
+</video>
+
+<div class="carousel-wrapper">
+  <div class="carousel-container">
+    <button class="arrow arrow-left">&#9664;</button>
+    <div class="carousel">
+      <div class="mission-circle">
+
+        <div class="mission-item">
+          <div class="mission-title">ISS Assembly</div>
+          <div class="mission-date">February 7th, 2001</div>
+          <a href="Subsites00s/ISSAssembly/ISSAssembly.html">
+            <div class="circle">
+              <img src="Images/issassembly.jpg" alt="The Destiny lab and PMA-2 are connected to Unity, viewed from the Shuttle with Earth behind">
+            </div>
+          </a>
+        </div>
+
+        <div class="mission-item">
+          <div class="mission-title">Spirit Rover</div>
+          <div class="mission-date">June 10th, 2003</div>
+          <a href="Subsites00s/SpiritRover/spiritrover.html">
+            <div class="circle">
+              <img src="Images/spiritrover.jpg" alt="Rendering of NASA’s Spirit rover exploring the rocky, dusty Martian terrain under a hazy sky">
+            </div>
+          </a>
+        </div>
+
+        <div class="mission-item">
+          <div class="mission-title">Opportunity</div>
+          <div class="mission-date">July 7th, 2003</div>
+          <a href="Subsites00s/OpportunityRover/opportunity.html">
+            <div class="circle">
+              <img src="Images/opportunityrover.jpg" alt="A Delta II rocket carrying NASA’s Mars Exploration Rover Opportunity launches from Cape Canaveral at night">
+            </div>
+          </a>
+        </div>
+
+        <div class="mission-item">
+          <div class="mission-title">Genesis</div>
+          <div class="mission-date">August 8th, 2001</div>
+          <a href="Subsites00s/Genesis/genesis.html">
+            <div class="circle">
+              <img src="Images/genesis.jpg" alt="A Rendering of NASA’s Genesis spacecraft with its collector arrays deployed to capture solar wind particles">
+            </div>
+          </a>
+        </div>
+
+        <div class="mission-item">
+          <div class="mission-title">STEREO</div>
+          <div class="mission-date">October 25th, 2006</div>
+          <a href="Subsites00s/Stereo/stereo.html">
+            <div class="circle">
+              <img src="Images/stereo.jpg" alt="A Rendering of NASA’s STEREO spacecraft observing the Sun from opposite sides to study solar activity">
+            </div>
+          </a>
+        </div>
+
+        <div class="mission-item">
+          <div class="mission-title">Mars Recon</div>
+          <div class="mission-date">August 12th, 2005</div>
+          <a href="Subsites00s/MarsReconOrbiter/marsreconorbiter.html">
+            <div class="circle">
+              <img src="Images/marsreconorbiter.jpg" alt="Rendering of NASA's Mars Reconnaissance Orbiter flying above the Martian surface, collecting scientific data.">
+            </div>
+          </a>
+        </div>
+
+        <div class="mission-item">
+          <div class="mission-title">New Horizons</div>
+          <div class="mission-date">January 19th, 2006</div>
+          <a href="Subsites00s/NewHorizons/newhorizons.html">
+            <div class="circle">
+              <img src="Images/newhorizons.jpg" alt="Rendering of NASA’s New Horizons spacecraft approaching Pluto with its moon Charon visible in the distance.">
+            </div>
+          </a>
+        </div>
+
+        <div class="mission-item">
+          <div class="mission-title">Phoenix Lander</div>
+          <div class="mission-date">August 4th, 2007</div>
+          <a href="Subsites00s/PhoenixLander/phoenixlander.html">
+            <div class="circle">
+              <img src="Images/phoenix.jpg" alt="Engineers in clean suits work on the Phoenix Mars Lander with two circular solar panels extended">
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.15/dist/jquery.bxslider.min.js"></script>
+<script src="../../script.js" defer></script>
+
+</body>
+</html>
